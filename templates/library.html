@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/library.css') }}">
+    <title>Библиотека</title>
+</head>
+<body>
+    <div class="title">
+        <span>Библиотека</span>
+    </div>
+    <div class="underline">
+        <span>Здесь содержится список всей литературы, которую я когда-либо прочел, и которая оказала на меня влияние</span>
+    </div>
+
+    <div class="list">
+        <div></div><div>
+            {% for i in bookslistprint %}
+                {% if i.1 == 0 %}
+                    </div><div class="genre">
+                    <b>{{ i.3 }}</b>
+                    </div> <div>
+                {% elif i.2 == 'еще' %}
+                    <span class="book">"{{ i.1 }}"</span> <br>
+                {% else %}
+                    <span class="book">"{{ i.1 }}" <br><b>{{ i.2 }}</b></span><br> <br>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="downside">
+    </div>
+</body>
+</html>

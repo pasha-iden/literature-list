@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+margin: 0px;
+font-family: "Open Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.title {
+font-size: 36px;
+font-weight: 670;
+letter-spacing: -2.5px;
+padding-top: 115px;
+padding-left: 25.85%;
+}
+
+.underline {
+margin-top: -5px;
+padding-left: 26%;
+max-width: 600px;
+font-size: 13.7px;
+letter-spacing: -0.3px;
+line-height: 22px
+}
+
+.list {
+padding-top: 36px;
+display: grid;
+grid-template-columns: 26% 74%;
+font-size: 13.7px;
+letter-spacing: -0.3px;
+line-height: 22px
+}
+
+.genre {
+text-align: right;
+word-spacing: 9999px;
+padding-right: 7px;
+margin-top: -0.5px;
+}
+
+.book {
+color: #595959;
+}
+
+.downside {
+padding-top: 150px;
+}
+
+@media (max-width: 600px) {
+
+    .title {
+    font-size: 29px;
+    }
+
+    .underline {
+    font-size: 11px;
+    line-height: 17px;
+    }
+
+    .list {
+    padding-top: 29px;
+    font-size: 11px;
+    line-height: 17px;
+    }
+
+}
