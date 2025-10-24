@@ -1,7 +1,7 @@
 import telebot, psycopg2
 from telebot import types
 
-bot = telebot.TeleBot('7056258134:AAF1DhOPSw5Q9OT8jruWUbZ_xC5nSl3ia-U')
+bot = telebot.TeleBot('')
 
 
 # Функция подачи SQL запроса
@@ -64,7 +64,7 @@ def bookadding (infoaboutbook):
     n=dbaction(0, query)
 def bookaddinginto (infoaboutbook):
 
-    # определение списка книга, которые нужно сдвинуть в списке жанра
+    # определение списка книг, которые нужно сдвинуть в списке жанра
     query = "SELECT id, numingenre FROM books WHERE genre='" + infoaboutbook[3] + "' AND numingenre>" + str(int(infoaboutbook[4])-1)
     renuberingbooks = dbaction(1, query)
 
